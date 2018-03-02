@@ -26,6 +26,7 @@
       /* bottom, image */
       url('../img/bg-mobile.jpg');
       background-size: cover;
+      background-position: left bottom;
   }
 }
 
