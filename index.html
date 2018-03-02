@@ -33,7 +33,7 @@
           <div class="collapse navbar-collapse justify-content-between w-100" id="navbarResponsive">
             <ul class="navbar-nav mx-auto text-center">
               <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#home">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#" 
@@ -42,13 +42,13 @@
                     data-target="#exampleModal">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
+                <a class="nav-link" href="#services">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Work</a>
+                <a class="nav-link" href="#work">Work</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#contact">Contact</a>
               </li>
             </ul>
             <ul class="nav navbar-nav flex-row">
@@ -60,7 +60,7 @@
     </div>
 
     <!-- Header -->
-    <div class="header container-fluid justify-content-center" style="padding-top: 45vh; height: 100vh;">
+    <div id="home" class="header container-fluid justify-content-center" style="padding-top: 45vh; height: 100vh;">
         <div class="row">
             <div class="col">
                 <h1>Shoko Designs</h1>
@@ -71,7 +71,7 @@
     </div>
 
     <!-- Services -->
-    <div class="container-fluid justify-content-center py-4" style="background-color: rgba(0, 0, 0, 0.03);">
+    <div id="services" class="container-fluid justify-content-center py-4" style="background-color: rgba(0, 0, 0, 0.03);">
         <div class="row">
             <div class="col">
                 <h4>Services</h4>
@@ -112,7 +112,7 @@
     </div><!-- ./container -->
 
     <!-- Work -->
-    <div class="container justify-content-center py-4">
+    <div id="work" class="container justify-content-center py-4">
         <div class="row">
             <div class="col">
                 <h4>Work</h4>
@@ -143,24 +143,23 @@
         </div><!-- ./row -->
     </div><!-- ./container -->
 
-
     <!-- Contact -->
-    <div class="container-fluid justify-content-center py-4" style="background-color: rgba(0, 0, 0, 0.03);">
-            <div class="row">
-                <div class="col">
-                    <h4>Contact</h4>
-                    <hr>
-                </div>
-            </div><!-- ./row -->
-            <div class="row py-4">
-                <div class="col">
-                    <a href="mailto:Shokodesignsllc@gmail.com">
-                        <p class="text-muted">Shokodesignsllc@gmail.com</p>
-                    </a>
-                </div>
-                <hr/>
-            </div><!-- ./row -->
-        </div><!-- ./container -->
+    <div id="contact" class="container-fluid justify-content-center py-4" style="background-color: rgba(0, 0, 0, 0.03);">
+        <div class="row">
+            <div class="col">
+                <h4>Contact</h4>
+                <hr>
+            </div>
+        </div><!-- ./row -->
+        <div class="row py-4">
+            <div class="col">
+                <a href="mailto:Shokodesignsllc@gmail.com">
+                    <p class="text-muted">Shokodesignsllc@gmail.com</p>
+                </a>
+            </div>
+            <hr/>
+        </div><!-- ./row -->
+    </div><!-- ./container -->
 
 
 
@@ -202,5 +201,51 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+    <script>
+        $(document).ready(function() {
+            $('.navbar-nav>li>a').on('click', function(){
+                $('.navbar-collapse').collapse('hide');
+            });
+
+            
+            // Select all links with hashes
+            $('a[href*="#"]')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function(event) {
+                // On-page links
+                if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+                && 
+                location.hostname == this.hostname
+                ) {
+                // Figure out element to scroll to
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                // Does a scroll target exist?
+                if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    $('html, body').animate({
+                    scrollTop: target.offset().top
+                    }, 1000, function() {
+                    // Callback after animation
+                    // Must change focus!
+                    var $target = $(target);
+                    $target.focus();
+                    if ($target.is(":focus")) { // Checking if the target was focused
+                        return false;
+                    } else {
+                        $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                        $target.focus(); // Set focus again
+                    };
+                    });
+                }
+                }
+            });
+        });
+    </script>
+
+</body>
 </html>
