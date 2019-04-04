@@ -1,3 +1,3 @@
-## Shoko Designs
+## SHOKO DESIGNS
 
-Stay auspicious™ | [Website](https://shokodesigns.com/) 
+Stay Auspicious™ | [Website](https://shokodesigns.com/) 
