@@ -279,7 +279,9 @@
                 <li>Domain Registration</li>
                 <li>1 Month of Free Hosting</li>
               </ul>
-              <a href="mailto:shokodesignsllc@gmail.com?subject=Basic Package Inquiry" class="btn btn-lg btn-block btn-primary">Get Started</a>
+              <button type="button" class="btn btn-lg btn-block btn-primary" data-toggle="modal" data-target="#basicModal">
+                Get Started
+              </button>
             </div>
           </div>
           <div class="card mb-4 box-shadow">
@@ -294,7 +296,9 @@
                 <li>Domain Registration</li>
                 <li>3 Months of Free Hosting</li>
               </ul>
-              <a href="mailto:shokodesignsllc@gmail.com?subject=Pro Package Inquiry" class="btn btn-lg btn-block btn-outline-primary">Get Started</a>
+              <button type="button" class="btn btn-lg btn-block btn-outline-primary" data-toggle="modal" data-target="#proModal">
+                Get Started
+              </button>
             </div>
           </div>
           <div class="card mb-4 box-shadow">
@@ -309,7 +313,9 @@
                   <li>Domain Registration</li>
                   <li>5 Months of Free Hosting</li>
               </ul>
-              <a href="mailto:shokodesignsllc@gmail.com?subject=E-Commerce Package Inquiry" class="btn btn-lg btn-block btn-primary">Get Started</a>
+              <button type="button" class="btn btn-lg btn-block btn-primary" data-toggle="modal" data-target="#ecommerceModal">
+                Get Started
+              </button>
             </div>
           </div>
         </div>
@@ -360,7 +366,7 @@
     </div><!-- ./footer -->
 
 
-    <!-- Modal -->
+    <!-- About Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -393,6 +399,162 @@
         </div>
     </div>
     
+
+    <!-- Basic Package Modal -->
+    <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Basic Package</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" action="https://formspree.io/shokodesignsllc@gmail.com" class="text-left">
+                        <input type="hidden" name="_subject" value="Basic Website Package Request" />
+
+                        <div class="form-group">
+                            <label for="basicFullName" class="required">Full Name</label>
+                            <input required type="text" name="full-name" class="form-control" id="basicFullName" aria-describedby="fullNameHelp" placeholder="Enter Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="basicEmail" class="required">Email Address</label>
+                            <input required type="email" name="email" class="form-control" id="basicEmail" aria-describedby="emailHelp" placeholder="Enter E-mail">
+                        </div>
+                        <div class="form-group">
+                            <label for="basicPhoneNumber">Phone Number</label>
+                            <input type="tel" name="phone-number" class="form-control" id="basicPhoneNumber" aria-describedby="phoneNumberHelp" placeholder="Enter Phone Number">
+                        </div>
+
+                        <!-- Do you already have a website? -->
+                        <label for="haveWebsite1" class="required">Do You Already Have a Website?</label>
+                        <div class="form-check">
+                            <input class="required form-check-input" type="radio" name="have-a-website" id="haveWebsite1" value="Yes" required>
+                            <label class="form-check-label" for="haveWebsite1">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="required form-check-input" type="radio" name="have-a-website" id="haveWebsite2" value="No">
+                            <label class="form-check-label" for="haveWebsite2">
+                                No
+                            </label>
+                        </div><br>
+
+                        <button type="submit" class="btn btn-primary btn-block">Request Your Free Proposal</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Pro Package Modal -->
+    <div class="modal fade" id="proModal" tabindex="-1" role="dialog" aria-labelledby="proModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Pro Package</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form method="POST" action="https://formspree.io/shokodesignsllc@gmail.com" class="text-left">
+                        <input type="hidden" name="_subject" value="Pro Website Package Request" />
+
+                        <div class="form-group">
+                            <label for="proFullName" class="required">Full Name</label>
+                            <input required type="text" name="full-name" class="form-control" id="proFullName" aria-describedby="fullNameHelp" placeholder="Enter Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="proEmail" class="required">Email Address</label>
+                            <input required type="email" name="email" class="form-control" id="proEmail" aria-describedby="emailHelp" placeholder="Enter E-mail">
+                        </div>
+                        <div class="form-group">
+                            <label for="proPhoneNumber">Phone Number</label>
+                            <input type="tel" name="phone-number" class="form-control" id="proPhoneNumber" aria-describedby="phoneNumberHelp" placeholder="Enter Phone Number">
+                        </div>
+
+                        <!-- Do you already have a website? -->
+                        <label class="required">Do You Already Have a Website?</label>
+                        <div class="form-check">
+                            <input class="required form-check-input" type="radio" name="have-a-website" id="proHaveWebsite1" value="Yes" required>
+                            <label class="form-check-label" for="prohaveWebsite1">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="required form-check-input" type="radio" name="have-a-website" id="proHaveWebsite2" value="No">
+                            <label class="form-check-label" for="proHaveWebsite2">
+                                No
+                            </label>
+                        </div><br>
+
+                        <button type="submit" class="btn btn-primary btn-block">Request Your Free Proposal</button>
+                    </form>
+
+                </div> 
+            </div>
+        </div>
+    </div>
+
+
+    <!-- E-Commerce Package Modal -->
+    <div class="modal fade" id="ecommerceModal" tabindex="-1" role="dialog" aria-labelledby="ecommerceModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">E-Commerce Package</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+                <form method="POST" action="https://formspree.io/shokodesignsllc@gmail.com" class="text-left">
+                    <input type="hidden" name="_subject" value="E-Commerce Website Package Request" />
+
+                    <div class="form-group">
+                        <label for="ecommFullName" class="required">Full Name</label>
+                        <input required type="text" name="full-name" class="form-control" id="ecommFullName" aria-describedby="fullNameHelp" placeholder="Enter Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="ecommEmail" class="required">Email Address</label>
+                        <input required type="email" name="email" class="form-control" id="ecommEmail" aria-describedby="emailHelp" placeholder="Enter E-mail">
+                    </div>
+                    <div class="form-group">
+                        <label for="ecommPhoneNumber">Phone Number</label>
+                        <input type="tel" name="phone-number" class="form-control" id="ecommPhoneNumber" aria-describedby="phoneNumberHelp" placeholder="Enter Phone Number">
+                    </div>
+
+                    <!-- Do you already have a website? -->
+                    <label class="required">Do You Already Have a Website?</label>
+                    <div class="form-check">
+                        <input class="required form-check-input" type="radio" name="have-a-website" id="ecommHaveWebsite1" value="Yes" required>
+                        <label class="form-check-label" for="ecommhaveWebsite1">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="required form-check-input" type="radio" name="have-a-website" id="ecommHaveWebsite2" value="No">
+                        <label class="form-check-label" for="ecommHaveWebsite2">
+                            No
+                        </label>
+                    </div><br>
+
+                    <button type="submit" class="btn btn-primary btn-block">Request Your Free Proposal</button>
+                </form>
+
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->

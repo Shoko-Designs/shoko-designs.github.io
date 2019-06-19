@@ -1,3 +1,9 @@
+/* Global */
+.form-group .required:before, label.required:before {
+  content:"* ";
+  color:red;
+}
+
 /* Header */
 .header {
   height: 100vh;
