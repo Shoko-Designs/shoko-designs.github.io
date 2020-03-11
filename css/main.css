@@ -21,6 +21,11 @@
   color: #fff;
 }
 
+/* Navigation */
+.fa-nav {
+  font-size: 0.8rem;
+}
+
 @media (max-width: 600px) {
   .header {
     background: 
